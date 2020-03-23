@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- 
+事件
+	事件就是文档或者浏览器窗口中发生的一些特定的交互瞬间
+	比如，点击按钮、鼠标移动、关闭窗口
+	我们可以在事件的属性中设置一些js代码，当事件被触发时，这些代码被执行,
+	将代码写到节点的时候并不方便维护；
+ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="bth">我是一个按钮</button>
+		<script type="text/javascript">
+			/*
+			可以为按钮对应的事件绑定处理函数
+			当事件被触发时，其对象的函数将被调用
+			*/
+		   //获取对象
+		   var btn = document.getElementById("bth");
+		   //btn.onclick=onclicks();
+		   //绑定事件
+		   //向这种为点击事件绑定的函数u，我们称为单击响应函数
+		   btn.onclick=function(){
+			   alert("点击我了");
+		   }
+		</script>
+	</body>
+</html>

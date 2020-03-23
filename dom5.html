@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- 
+getElementByid()
+	通过id属性获取一个属性节点
+getElementsByTagName()
+	通过标签名获取一组元素点对象，返回一个类数组，所查询到的元素都会封装到数组中
+	即使查询到的一个也会封装到数组
+getElementsByName()
+	通过name属性获取一组元素节点对象
+innerHTML
+	用来获取元素内部的html代码
+	对于自结束标签没有意义
+如果需要读取元素节点属性:
+	直接使用元素.属性名
+	注意class属性不能采用这个方式
+		取得clss就需要采取：元素.className；
+ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//为id为bj的属性绑定一个事件
+			window.onload = function(){
+				var btn01 = document.getElementById('btn01');
+				btn01.onclick = function(){
+					var bj = document.getElementById('bj');
+					//同过innerHTML获取元素内的代码
+					alert(bj.innerHTML);
+				};
+				var btn02 = document.getElementById('btn02');
+				btn02.onclick=function(){
+					//查找li节点
+					var lis = document.getElementsByTagName("li");
+					for(var i=0;i<lis.length;i++){
+						alert(lis[i].innerHTML);
+					}
+					}
+				var btn03 = document.getElementById('btn03');
+				btn03.onclick=function(){
+					var inupts = document.getElementsByName("gender");
+					// alert(inupts.length);
+					for(var i = 0;i< inupts.length;i++){
+						alert(inupts[i].className);
+					}
+				};
+				}
+		</script>
+	</head>
+	<body>
+		<div id="rigth">
+			<button id="btn01">点击</button>
+			<button id="btn02">点击</button>
+			<button id="btn03">点击</button>
+		</div>
+		<div id="total">
+			<div class="inner">
+				<p>
+					你喜欢哪个城市
+				</p>
+				<ul id="city">
+					<li id="bj">北京</li>
+					<li>上海</li>
+					<li>东京</li>
+					<li>首尔</li>
+				</ul>
+				Gender:
+				<input class="box" type="radio" name="gender" value="male" />
+				Male
+				<input class="box" type="radio" name="gender" value="female" />
+				Female
+				<br>
+				<br>
+				<input type="text" name="name" id="username" value="abcde" />
+			</div>
+		</div>
+	</body>
+</html>

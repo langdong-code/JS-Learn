@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 
+获取元素的子节点
+通过具体的元素节点调用
+	getElementByTagName()
+	-方法，返回当前节点指定标签节名后代节点
+	childNodes
+	-属性，表示当前节点的所有子节点
+	-属性会获取包括元素、文本、注释、空白在内的节点
+	firstChild
+	-属性，表示当前节点的第一个子节点
+	lastChild
+	-属性，表示当前节点的最后一个子节点
+	firstElementchild
+	-获取第一个子元素
+	
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn01 = document.getElementById("btn01");
+				btn01.onclick=function(){
+					var city = document.getElementById("city");
+					var lis = city.getElementsByTagName("li");
+					alert(lis[0].innerHTML);
+				}
+			}
+			
+		</script>
+	</head>
+<body>
+		<div id="rigth">
+			<button id="btn01">点击</button>
+			<button id="btn02">点击</button>
+			<button id="btn03">点击</button>
+		</div>
+		<div id="total">
+			<div class="inner">
+				<p>
+					你喜欢哪个城市
+				</p>
+				<ul id="city">
+					<li id="bj">北京</li>
+					<li>上海</li>
+					<li>东京</li>
+					<li>首尔</li>
+				</ul>
+				Gender:
+				<input class="box" type="radio" name="gender" value="male" />
+				Male
+				<input class="box" type="radio" name="gender" value="female" />
+				Female
+				<br>
+				<br>
+				<input type="text" name="name" id="username" value="abcde" />
+			</div>
+		</div>
+	</body>
+</html>

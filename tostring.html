@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,age,gender)
+			{
+				this.name = name;
+				this.age = age;
+				this.gender = gender;
+			}
+			var per = new Person("孙悟空",34,"花果山");
+			alert(per.__proto__.__proto__.hasOwnProperty("toString"));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

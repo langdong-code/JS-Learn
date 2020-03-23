@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				return "name="+this.name+",age="+this.age;
+			}
+			var per = new Person("孙悟空",18);
+			var per1 = new Person("猪八戒",38);
+			var per2 = new Person("蜘蛛精",48);
+			var per3 = new Person("二郎神",28);
+			var per4 = new Person("红孩儿",8);
+			var perArr = [per,per1,per2,per3,per4,];
+			//要提取信息的数组arr
+			function getAdult(arr){
+				//创建一个新的数组
+				var newArr = [];
+				for(var i=0;i<arr.length;i++){
+					var p = arr[i];
+					if(p.age>18){
+						newArr.push(p);
+					}
+				}
+				return newArr;
+			}
+			console.log(getAdult(perArr));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

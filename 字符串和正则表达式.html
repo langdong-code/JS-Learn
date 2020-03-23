@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var str = "1a2b3chsiek45";
+			/*
+			将数组拆分成数组sploit()
+			方法中可以传递一个字符串表达式作为参数，这样方法将会根据正则表达式去拆分字符串
+			search()
+				可以搜索字符串中是否含有指定内容
+				如果搜索到指定内容，则返回第一次出现的所以，如果没有则返回-1
+				它可以接受一个正则表达式作为参数，然后会根据表达式去检索字符串
+				search只会查找一个，即使设置全局匹配也没有
+			match()
+				可以根据正则表达式，从一个字符串中将符合条件的内容提取出来
+				默认情况下match只会找到第一个符号要求的内容，找到以后就停止
+					我们可以设置正则为全局匹配模式
+					可以为一个正则表达式匹配多个模式。
+					match会将匹配的内容封装到数组中
+			replace()
+				可以将字符串中的指定内容替换为新的内容
+				参数1 被替换的内容,可以接受一个正则表达式，参数2 新的内容
+				默认替换成第一个
+			*/
+		   /*
+		   sploit()
+				默认进行全局匹配
+		   根据任意字母来将字符串拆分
+		   */
+		   //var result = str.split(/[^a-z]/);
+		   str = "hello absc hell aec";
+		   //搜索字符串是否包含abc 或者aec
+		   //result = str.search(/a[be]c/);
+		   var str = "1a2b3#chsiek45";
+		   //result = str.match(/[A-z]/g);
+		   result = str.replace("#","@");
+		   alert(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

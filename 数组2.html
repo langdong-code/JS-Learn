@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr = ["孙悟空","猪八戒","唐生","黄梅大王","二郎神",];
+			/*slice()用来从数组中提取元素,参数1开始位置的索引，包含索引，参数2，结束索引
+			如果传一个负值就倒着来读取元素
+			*/
+		   //console.log(arr.slice(1,3));
+		   /*
+		   splice()删除数组中指定的元素
+		   会将指定的元素从原数组中删除并形成新的数组
+		   参数1，开始位置；参数2，结束位置；参数3，新的元素；
+		   */
+		  var result=arr.splice(0,2);
+		  console.log(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

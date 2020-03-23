@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+浏览器加载页面是从上向下的顺序
+读取到一行就运行到一行,如果将script标签写到上面，代码在执行时，页面还没有加载
+将js代码编写到下部就是为了，可以在页面加载完毕后在执行js代码
+onload事件会在整个页面加载完成后才触发
+在代码执行的时候，页面还没有加载，页面没有加载DOM对象也没有加载会导致代码无法执行
+所以js有两种加载方式：
+	第一写入head中，只是需要加载window.onload事件
+	第二写入body中；
+	
+ -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击我一些</button>
+		<script type="text/javascript">
+			// var btn = document.getElementById("btn");
+			// btn.onclick=function(){
+			// 	alert("hello");
+			// };
+			//为window绑定一个onload事件
+			//该事件对应的响应函数会在页面加载完后执行，这样可以确保我们的代码执行所有的DOM对象已经加载完毕
+			window.onload=function(){
+			var btn = document.getElementById("btn");
+			btn.onclick=function(){
+				alert("hello");
+			};
+			}
+		</script>
+	</body>
+</html>
